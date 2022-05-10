@@ -59,8 +59,8 @@ def stats(update, context):
 
 def start(update, context):
     buttons = ButtonMaker()
-    buttons.buildbutton("Channel", "https://t.me/Namexian")
-    buttons.buildbutton("Group", "https://t.me/EunhaMirror")
+    buttons.buildbutton("Updates", "https://t.me/REX_BOTZ")
+    buttons.buildbutton("Support", "https://t.me/REX_Bots_Support")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
@@ -69,7 +69,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
         sendMarkup(start_string, context.bot, update.message, reply_markup)
     else:
-        sendMarkup('Not Authorized user, deploy your own mirror-leech bot', context.bot, update.message, reply_markup)
+        sendMarkup('You cannott use me in private join my mirror group to use mehttps://t.me/+XovvU7Ri0p5hMDk1', context.bot, update.message, reply_markup)
 
 def restart(update, context):
     restart_message = sendMessage("Restarting...", context.bot, update.message)
